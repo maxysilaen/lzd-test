@@ -74,10 +74,15 @@ function setChart(){
 </script>
 
 {% block content %}
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+ 
+ 
 
-
-
-
+<form method="GET" action="" id=form1>
+<p>Date: <input type="text" id="datepicker" name=date></p>
+</form>
+ <button type="submit" form="form1" value="Submit">Result</button>
     <div class='col-sm-12' url-endpoint='/api/chart/?{{date}}'>
         <h1>Status Item Penjualan Chart</h1>
         <div class='col-sm-6'>
@@ -86,7 +91,6 @@ function setChart(){
 
 
     </div>
-</div>
 
 
 {% endblock content %}
